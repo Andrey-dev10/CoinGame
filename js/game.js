@@ -18,6 +18,12 @@ function addItems() {
   createItem(375, 400, 'coin');
   createItem(575, 500, 'coin');
   createItem(225, 500, 'coin');
+  createItem(100, 250, 'coin');
+  createItem(575, 150, 'coin');
+  createItem(525, 300, 'coin');
+  createItem(650, 250, 'coin');
+  createItem(225, 200, 'coin');
+  creteItem(375, 100, 'poison');
 }
 
 // add platforms to the game
@@ -26,6 +32,14 @@ function addPlatforms() {
   platforms.create(450, 550, 'platform');
   platforms.create(100, 550, 'platform');
   platforms.create(300, 450, 'platform');
+  platforms.create(250, 150, 'platform');
+  platforms.create(50, 300, 'platform');
+  platforms.create(150, 250, 'platform');
+  platforms.create(650, 300, 'platform');
+  platforms.create(550, 300, 'platform2');
+  platforms.create(300, 450, 'platform2');
+  platforms.create(400, 350, 'platform2');
+  platforms.create(100, 100, 'platform2');
   platforms.setAll('body.immovable', true);
 }
 
@@ -74,6 +88,8 @@ window.onload = function () {
     game.load.spritesheet('player', '../img/chalkers.png', 48, 62);
     game.load.spritesheet('coin', '../img/coin.png', 36, 44);
     game.load.spritesheet('badge', '../img/badge.png', 42, 54);
+    game.load.spritesheet('poison', '../img/poison.png', 32, 32);
+    
   }
 
   // initial game set up
