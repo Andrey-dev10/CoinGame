@@ -61,7 +61,14 @@ function createBadge() {
 // when the player collects an item on the screen
 function itemHandler(player, item) {
   item.kill();
-  currentScore = currentScore + 10;
+
+  if (item.key === 'coin') {
+    currentScore = currentScore + 10;
+  } else if (item.key ==='poison') {
+    currentScore = currentScore - 25;
+  } else if (item.key === 'star') {
+    currentScore = currentScore + 25;
+  }
   if (currentScore === winningScore) {
       createBadge();
   }
@@ -89,7 +96,7 @@ window.onload = function () {
     game.load.spritesheet('coin', '../img/coin.png', 36, 44);
     game.load.spritesheet('badge', '../img/badge.png', 42, 54);
     game.load.spritesheet('poison', '../img/poison.png', 32, 32);
-    
+
   }
 
   // initial game set up
